@@ -1,0 +1,12 @@
+C:\Users\BlackBroke\source\repos\InternetShop\domain\InternetShop\bin\Debug\net5.0\InternetShop.deps.json
+C:\Users\BlackBroke\source\repos\InternetShop\domain\InternetShop\bin\Debug\net5.0\InternetShop.dll
+C:\Users\BlackBroke\source\repos\InternetShop\domain\InternetShop\bin\Debug\net5.0\ref\InternetShop.dll
+C:\Users\BlackBroke\source\repos\InternetShop\domain\InternetShop\bin\Debug\net5.0\InternetShop.pdb
+C:\Users\BlackBroke\source\repos\InternetShop\domain\InternetShop\obj\Debug\net5.0\InternetShop.csproj.AssemblyReference.cache
+C:\Users\BlackBroke\source\repos\InternetShop\domain\InternetShop\obj\Debug\net5.0\InternetShop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BlackBroke\source\repos\InternetShop\domain\InternetShop\obj\Debug\net5.0\InternetShop.AssemblyInfoInputs.cache
+C:\Users\BlackBroke\source\repos\InternetShop\domain\InternetShop\obj\Debug\net5.0\InternetShop.AssemblyInfo.cs
+C:\Users\BlackBroke\source\repos\InternetShop\domain\InternetShop\obj\Debug\net5.0\InternetShop.csproj.CoreCompileInputs.cache
+C:\Users\BlackBroke\source\repos\InternetShop\domain\InternetShop\obj\Debug\net5.0\InternetShop.dll
+C:\Users\BlackBroke\source\repos\InternetShop\domain\InternetShop\obj\Debug\net5.0\ref\InternetShop.dll
+C:\Users\BlackBroke\source\repos\InternetShop\domain\InternetShop\obj\Debug\net5.0\InternetShop.pdb
