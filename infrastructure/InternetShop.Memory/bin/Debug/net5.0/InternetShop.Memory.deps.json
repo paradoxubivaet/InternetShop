@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "InternetShop.Memory/1.0.0": {
+        "dependencies": {
+          "InternetShop": "1.0.0"
+        },
+        "runtime": {
+          "InternetShop.Memory.dll": {}
+        }
+      },
+      "InternetShop/1.0.0": {
+        "runtime": {
+          "InternetShop.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "InternetShop.Memory/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InternetShop/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
