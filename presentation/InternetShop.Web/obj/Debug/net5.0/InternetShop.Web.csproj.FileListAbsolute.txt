@@ -24,7 +24,6 @@ C:\Users\BlackBroke\source\repos\InternetShop\presentation\InternetShop.Web\obj\
 C:\Users\BlackBroke\source\repos\InternetShop\presentation\InternetShop.Web\obj\Debug\net5.0\InternetShop.Web.TagHelpers.output.cache
 C:\Users\BlackBroke\source\repos\InternetShop\presentation\InternetShop.Web\obj\Debug\net5.0\InternetShop.Web.RazorCoreGenerate.cache
 C:\Users\BlackBroke\source\repos\InternetShop\presentation\InternetShop.Web\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\BlackBroke\source\repos\InternetShop\presentation\InternetShop.Web\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\BlackBroke\source\repos\InternetShop\presentation\InternetShop.Web\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\BlackBroke\source\repos\InternetShop\presentation\InternetShop.Web\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\BlackBroke\source\repos\InternetShop\presentation\InternetShop.Web\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -119,3 +118,4 @@ C:\Users\BlackBroke\source\repos\InternetShop\presentation\InternetShop.Web\bin\
 C:\Users\BlackBroke\source\repos\InternetShop\presentation\InternetShop.Web\obj\Debug\net5.0\Razor\Views\Search\Index.cshtml.g.cs
 C:\Users\BlackBroke\source\repos\InternetShop\presentation\InternetShop.Web\bin\Debug\net5.0\InternetShop.Memory.dll
 C:\Users\BlackBroke\source\repos\InternetShop\presentation\InternetShop.Web\bin\Debug\net5.0\InternetShop.Memory.pdb
+C:\Users\BlackBroke\source\repos\InternetShop\presentation\InternetShop.Web\obj\Debug\net5.0\Razor\Views\Book\Index.cshtml.g.cs
