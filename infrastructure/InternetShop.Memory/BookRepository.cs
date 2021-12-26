@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace InternetShop.Memory
@@ -13,6 +14,15 @@ namespace InternetShop.Memory
             new Book(3, "ISBN 32561-34673", "B. Kernighan, D. Ritchie" ,"C Programming Language", "Known as the bible of C, this classic" +
                         "bestseller introduces", 14.98m)
         };
+
+        public Book[] GetAllByIds(IEnumerable<int> bookIds)
+        {
+            var foundBooks = from book in books
+                             join bookId in bookIds on book.Id equals bookId
+                             select book;
+
+            return foundBooks.ToArray();
+        }
 
         public Book[] GetAllByIsbn(string isbn)
         {
