@@ -62,7 +62,7 @@ namespace InternetShop.Web.Controllers
 
             SaveOrderAndCart(order,cart);
 
-            return RedirectToAction("Index"," Book", new {id = bookId });
+            return RedirectToAction("Index", "Book", new { id = bookId });
         }
 
         [HttpPost]
