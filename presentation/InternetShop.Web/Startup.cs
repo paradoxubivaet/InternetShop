@@ -1,4 +1,5 @@
 using InternetShop.Memory;
+using InternetShop.Messages;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -35,9 +36,10 @@ namespace InternetShop.Web
             });
 
             services.AddSingleton<IBookRepository, BookRepository>();
-            services.AddSingleton<BookService>();
-
             services.AddSingleton<IOrderRepository, OrderRepository>();
+            services.AddSingleton<INotificationService, DebugNotificationService>();
+
+            services.AddSingleton<BookService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
