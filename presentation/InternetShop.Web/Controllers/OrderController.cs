@@ -74,7 +74,7 @@ namespace InternetShop.Web.Controllers
 
             SaveOrderAndCart(order, cart);
 
-            return RedirectToAction("Index", " Book", new { bookId });
+            return RedirectToAction("Index", "Order");
         }
         
         private (Order order, Cart cart) GetOrCreateOrderAndCart()
@@ -104,15 +104,15 @@ namespace InternetShop.Web.Controllers
             HttpContext.Session.Set(cart);
         }
 
-        public IActionResult RemoveItem(int id)
+        public IActionResult RemoveItem(int bookId)
         {
             (Order order, Cart cart) = GetOrCreateOrderAndCart();
 
-            order.RemoveItem(id);
+            order.RemoveItem(bookId);
 
             SaveOrderAndCart(order, cart);
 
-            return RedirectToAction("Index","Book",new { id });
+            return RedirectToAction("Index","Order");
         }
     }
 }
