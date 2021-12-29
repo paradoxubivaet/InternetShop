@@ -66,7 +66,7 @@ namespace InternetShop
             if (index == -1)
                 ThrowBookException("Order does not contain specified item", bookId);
 
-            items.RemoveAll(item => item.BookId == bookId);
+            items.RemoveAt(index);
         }
     }
 }
