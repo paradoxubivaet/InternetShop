@@ -7,15 +7,21 @@ namespace InternetShop
     public class Order
     {
         public int Id { get; }
+
         private List<OrderItem> items;
+
         public IReadOnlyCollection<OrderItem> Items
         {
             get { return items; }
         }
 
+        public OrderDelivery Delivery { get; set; }
+        public OrderPayment Payment { get; set; }
+        public string CellPhone { get; set;}
         public int TotalCount => items.Sum(x => x.Count);
 
-        public decimal TotalPrice => items.Sum(x => x.Price*x.Count);
+        public decimal TotalPrice => items.Sum(x => x.Price * x.Count)
+                                   + (Delivery?.Amount ?? 0m);
 
         public Order(int id, IEnumerable<OrderItem> items)
         {

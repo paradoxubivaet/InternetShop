@@ -2,7 +2,7 @@
 
 namespace InternetShop.Contractors
 {
-    public interface IDeliveryService
+    public interface IPaymentService
     {
         string UniqueCode { get; }
 
@@ -12,6 +12,6 @@ namespace InternetShop.Contractors
 
         Form MoveNextForm(int orderId, int step, IReadOnlyDictionary<string, string> values);
 
-        OrderDelivery GetDelivery(Form form);
+        OrderPayment GetPayment(Form form);
     }
 }
