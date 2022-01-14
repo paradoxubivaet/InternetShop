@@ -6,6 +6,7 @@ using InternetShop.Messages;
 using InternetShop.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using InternetShop.Contractors;
+using InternetShop.Web.Contractors;
 
 namespace InternetShop.Web.Controllers
 {
@@ -15,18 +16,21 @@ namespace InternetShop.Web.Controllers
         private readonly IOrderRepository orderRepository; 
         private readonly IEnumerable<IDeliveryService> deliveryServices;
         private readonly IEnumerable<IPaymentService> paymentServices;
+        private readonly IEnumerable<IWebContractorService> webContractorServices;
         private readonly INotificationService notificationService;
 
         public OrderController(IBookRepository bookRepository,
                                IOrderRepository orderRepository,
                                IEnumerable<IDeliveryService> deliveryServices,
                                IEnumerable<IPaymentService> paymentServices,
+                               IEnumerable<IWebContractorService> webContractorServices,
                                INotificationService notificationService)
         {
             this.bookRepository = bookRepository;
             this.orderRepository = orderRepository;
             this.deliveryServices = deliveryServices;
             this.paymentServices = paymentServices;
+            this.webContractorServices = webContractorServices;
             this.notificationService = notificationService;
         }
 
@@ -254,6 +258,11 @@ namespace InternetShop.Web.Controllers
 
             var form = paymentService.CreateForm(order);
 
+            var webContractorService = webContractorServices.SingleOrDefault(service => service.UniqueCode == uniqueCode);
+
+            if (webContractorService != null)
+                return Redirect(webContractorService.GetUri);
+
             return View("PaymentStep", form);
         }
 
@@ -275,6 +284,13 @@ namespace InternetShop.Web.Controllers
             }
 
             return View("PaymentStep", form);
+        }
+
+        public IActionResult Finish()
+        {
+
+
+            return View();
         }
     }
 }
