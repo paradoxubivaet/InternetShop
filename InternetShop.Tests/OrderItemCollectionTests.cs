@@ -6,7 +6,7 @@ namespace InternetShop.Tests
     public class OrderItemCollectionTests
     {
         [Fact]
-        public void GetItem_WithExistingItem_ReturnsItem()
+        public void Get_WithExistingItem_ReturnsItem()
         {
             var order = new Order(1, new[]
             {
@@ -20,7 +20,7 @@ namespace InternetShop.Tests
         }
 
         [Fact]
-        public void GetItem_WithNonExistingItem_ThrowsInvalidOperationException()
+        public void Get_WithNonExistingItem_ThrowsInvalidOperationException()
         {
             var order = new Order(1, new[]
             {
@@ -64,7 +64,22 @@ namespace InternetShop.Tests
         }
 
         [Fact]
-        public void RemoveItem_WithExistingItem_RemovesItem()
+        public void Remove_WithExistingItem_RemovesItem()
+        {
+            var order = new Order(1, new[]
+            {
+                new OrderItem(1, 10m, 3),
+                new OrderItem(2, 100m, 5),
+            });
+
+            order.Items.Remove(1);
+
+            Assert.Collection(order.Items,
+                              item => Assert.Equal(2, item.BookId));
+        }
+
+        [Fact]
+        public void Remove_WithExistingItem_ThrowsInvalidOperationException()
         {
             var order = new Order(1, new[]
             {

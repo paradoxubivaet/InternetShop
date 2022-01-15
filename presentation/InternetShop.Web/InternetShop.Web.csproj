@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\application\InternetShop.Web.App\InternetShop.Web.App.csproj" />
     <ProjectReference Include="..\..\domain\InternetShop\InternetShop.csproj" />
     <ProjectReference Include="..\..\infrastructure\InternetShop.Memory\InternetShop.Memory.csproj" />
     <ProjectReference Include="..\..\plugins\InternetShop.YandexKassa\InternetShop.YandexKassa.csproj" />
