@@ -1,6 +1,7 @@
 using InternetShop.Contractors;
 using InternetShop.Memory;
 using InternetShop.Messages;
+using InternetShop.Web.App;
 using InternetShop.Web.Contractors;
 using InternetShop.YandexKassa;
 using Microsoft.AspNetCore.Builder;
@@ -29,6 +30,7 @@ namespace InternetShop.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddHttpContextAccessor();
             services.AddDistributedMemoryCache();
             services.AddSession(options => 
             {
@@ -46,6 +48,7 @@ namespace InternetShop.Web
             services.AddSingleton<IPaymentService, YandexKassaPaymentService>();
             services.AddSingleton<IWebContractorService, YandexKassaPaymentService>();
 
+            services.AddSingleton<OrderService>();
             services.AddSingleton<BookService>();
         }
 
@@ -73,16 +76,15 @@ namespace InternetShop.Web
 
             app.UseEndpoints(endpoints =>
             {
+
+                endpoints.MapControllerRoute(
+                    name: "areas",
+                    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                    );
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-
-                endpoints.MapAreaControllerRoute(
-                    name: "yandex.kassa",
-                    areaName: "YandexKassa",
-                    pattern: "YandexKassa/{controller=Home}/{action=Index}/{id?}");
-
-
             });
 
 

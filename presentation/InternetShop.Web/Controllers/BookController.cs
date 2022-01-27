@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using InternetShop.Web.App;
+using Microsoft.AspNetCore.Mvc;
 
 namespace InternetShop.Web.Controllers
 {
