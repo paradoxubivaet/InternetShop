@@ -8,7 +8,6 @@ using InternetShop.Contractors;
 using InternetShop.Web.Contractors;
 using InternetShop.Web.App;
 using System;
-using InternetShop.Memory;
 
 namespace InternetShop.Web.Controllers
 {

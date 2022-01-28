@@ -8,9 +8,9 @@ namespace InternetShop
 {
     public class OrderDelivery
     {
-        public string UniqieCode { get; }
+        public string UniqueCode { get; }
         public string Description { get; }
-        public decimal Amount { get; }
+        public decimal Price { get; }
         public IReadOnlyDictionary<string, string> Parametrs { get; }
         public OrderDelivery(string uniqueCode,
                              string description,
@@ -26,9 +26,9 @@ namespace InternetShop
             if (parametrs == null)
                 throw new ArgumentNullException(nameof(parametrs));
 
-            UniqieCode = uniqueCode;
+            UniqueCode = uniqueCode;
             Description = description;
-            Amount = amount;
+            Price = amount;
             Parametrs = parametrs;
 
         }

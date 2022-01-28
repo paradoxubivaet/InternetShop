@@ -1,5 +1,4 @@
 using InternetShop.Contractors;
-using InternetShop.Memory;
 using InternetShop.Messages;
 using InternetShop.Web.App;
 using InternetShop.Web.Contractors;
@@ -40,8 +39,6 @@ namespace InternetShop.Web
 
             });
 
-            services.AddSingleton<IBookRepository, BookRepository>();
-            services.AddSingleton<IOrderRepository, OrderRepository>();
             services.AddSingleton<INotificationService, DebugNotificationService>();
             services.AddSingleton<IDeliveryService, PostamateDeliveryService>();
             services.AddSingleton<IPaymentService, CashPaymentService>();
