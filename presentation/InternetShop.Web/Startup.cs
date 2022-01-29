@@ -1,18 +1,15 @@
 using InternetShop.Contractors;
+using InternetShop.Data.EF;
 using InternetShop.Messages;
 using InternetShop.Web.App;
 using InternetShop.Web.Contractors;
 using InternetShop.YandexKassa;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace InternetShop.Web
 {
@@ -38,6 +35,8 @@ namespace InternetShop.Web
                 options.Cookie.IsEssential = true;
 
             });
+
+            services.AddEfRepositories(Configuration.GetConnectionString("InternetShop"));
 
             services.AddSingleton<INotificationService, DebugNotificationService>();
             services.AddSingleton<IDeliveryService, PostamateDeliveryService>();
