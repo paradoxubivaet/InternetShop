@@ -7,7 +7,7 @@ namespace InternetShop.Data.EF.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.Sql("CREATE FULLTEXT CATALOG InternetShopFullTextCatalog AS DEFAULT", suppressTransaction: true);
-            migrationBuilder.Sql("CREATE FULLTEXT INDEX ON BOOKS(Author, Title) KEY INDEX PK_Books WITH STOPLIST = SYSTEM", suppressTransaction: true);
+            migrationBuilder.Sql("CREATE FULLTEXT INDEX ON Books(Author, Title) KEY INDEX PK_Books WITH STOPLIST = SYSTEM", suppressTransaction: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
