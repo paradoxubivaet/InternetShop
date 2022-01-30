@@ -166,6 +166,8 @@ namespace InternetShop.Web.Controllers
             var payment = paymentService.GetPayment(form);
             var model = orderService.SetPayment(payment);
 
+
+
             return View("Finish", model);
         }
     }
